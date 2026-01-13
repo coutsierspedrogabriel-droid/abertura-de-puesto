@@ -172,7 +172,7 @@ export default function ShiftPage() {
         <div className="flex gap-4">
           <Button
             variant="outline"
-            onClick={() => navigate('/area')}
+            onClick={() => (locationState ? navigate('/auxilio', { state: locationState }) : navigate('/area'))}
             className="flex-1 py-6 text-lg"
           >
             <ArrowLeft className="mr-2 h-5 w-5" />

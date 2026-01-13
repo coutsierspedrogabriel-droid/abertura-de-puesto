@@ -130,11 +130,7 @@ export default function ResultsPage() {
 
       if (answersError) throw answersError;
 
-      // Transform the data to flatten the question
-      const transformedAnswers = (answersData || []).map((a: any) => ({
-        ...a,
-        question: a.question,
-      }));
+      const transformedAnswers = ((answersData || []) as unknown) as Answer[];
 
       // Sort by question number
       transformedAnswers.sort((a: Answer, b: Answer) => 

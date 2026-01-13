@@ -31,7 +31,7 @@ export default function AuthPage() {
 
   useEffect(() => {
     if (user) {
-      navigate('/shift');
+      navigate('/area');
     }
   }, [user, navigate]);
 

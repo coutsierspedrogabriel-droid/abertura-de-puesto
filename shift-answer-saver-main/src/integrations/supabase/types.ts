@@ -205,6 +205,63 @@ export type Database = {
         }
         Relationships: []
       }
+      help_documents: {
+        Row: {
+          area: Database["public"]["Enums"]["area_type"]
+          created_at: string
+          file_name: string
+          file_path: string
+          id: string
+          mime_type: string
+          operation_id: string | null
+          production_line_id: string | null
+          title: string | null
+          updated_at: string
+          uploaded_by: string
+        }
+        Insert: {
+          area: Database["public"]["Enums"]["area_type"]
+          created_at?: string
+          file_name: string
+          file_path: string
+          id?: string
+          mime_type: string
+          operation_id?: string | null
+          production_line_id?: string | null
+          title?: string | null
+          updated_at?: string
+          uploaded_by: string
+        }
+        Update: {
+          area?: Database["public"]["Enums"]["area_type"]
+          created_at?: string
+          file_name?: string
+          file_path?: string
+          id?: string
+          mime_type?: string
+          operation_id?: string | null
+          production_line_id?: string | null
+          title?: string | null
+          updated_at?: string
+          uploaded_by?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "help_documents_operation_id_fkey"
+            columns: ["operation_id"]
+            isOneToOne: false
+            referencedRelation: "operations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "help_documents_production_line_id_fkey"
+            columns: ["production_line_id"]
+            isOneToOne: false
+            referencedRelation: "production_lines"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never

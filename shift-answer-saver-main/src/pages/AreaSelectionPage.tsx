@@ -132,7 +132,7 @@ export default function AreaSelectionPage() {
   const handleContinue = () => {
     if (!selectedArea || !selectedLine || !selectedOperation) return;
     
-    navigate('/shift', {
+    navigate('/auxilio', {
       state: {
         area: selectedArea,
         productionLineId: selectedLine,

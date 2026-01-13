@@ -60,6 +60,40 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Documentos de auxílio (PDF) antes do checklist
+
+O fluxo agora é:
+
+`Login` → `Selecionar Área/Linha/Operação` → **`Auxílio`** → `Selecionar Turno` → `Checklist`
+
+### Como adicionar um documento específico para uma LINHA
+
+- Entre no sistema e vá para **Selecionar Área**
+- Selecione **Área**, **Linha** e **Operação**
+- Clique em **Continuar** (você vai para a aba **Auxílio**)
+- Em **Tipo de vínculo**, selecione **Linha (vale para todas as operações da linha)**
+- Selecione o arquivo (PDF/DOC/DOCX) e clique em **Enviar documento**
+- O arquivo ficará disponível na seção **Linha** sempre que você escolher a mesma **Área + Linha** (independente da operação)
+
+### Como adicionar um documento específico para uma OPERAÇÃO
+
+- Na aba **Auxílio**, escolha **Tipo de vínculo → Operação**
+- Envie o arquivo
+- O arquivo aparecerá na seção **Operação** apenas para a mesma **Área + Linha + Operação**
+
+### Como adicionar um documento específico para a ÁREA (geral)
+
+- Na aba **Auxílio**, escolha **Tipo de vínculo → Área**
+- Envie o arquivo
+- O arquivo aparecerá na seção **Área** para qualquer linha/operação daquela área
+
+### Observação (Supabase)
+
+Essa funcionalidade usa:
+
+- **Tabela**: `public.help_documents`
+- **Storage bucket**: `help-documents` (privado, abertura via URL assinada)
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
