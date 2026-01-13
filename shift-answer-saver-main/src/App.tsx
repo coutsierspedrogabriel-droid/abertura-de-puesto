@@ -8,6 +8,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
 import AuthPage from "./pages/AuthPage";
 import AreaSelectionPage from "./pages/AreaSelectionPage";
+import AuxilioPage from "./pages/AuxilioPage";
 import ShiftPage from "./pages/ShiftPage";
 import FormPage from "./pages/FormPage";
 import ResultsPage from "./pages/ResultsPage";
@@ -32,6 +33,14 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <AreaSelectionPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/auxilio"
+              element={
+                <ProtectedRoute>
+                  <AuxilioPage />
                 </ProtectedRoute>
               }
             />
