@@ -14,6 +14,7 @@ import ResultsPage from "./pages/ResultsPage";
 import HistoryPage from "./pages/HistoryPage";
 import SuccessPage from "./pages/SuccessPage";
 import NotFound from "./pages/NotFound";
+import PostLoginPage from "./pages/PostLoginPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,14 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<AuthPage />} />
+            <Route
+              path="/post-login"
+              element={
+                <ProtectedRoute>
+                  <PostLoginPage />
+                </ProtectedRoute>
+              }
+            />
             <Route
               path="/area"
               element={
