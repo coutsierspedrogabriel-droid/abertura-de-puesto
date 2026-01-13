@@ -31,7 +31,7 @@ export default function AuthPage() {
 
   useEffect(() => {
     if (user) {
-      navigate('/post-login');
+      navigate('/area');
     }
   }, [user, navigate]);
 
